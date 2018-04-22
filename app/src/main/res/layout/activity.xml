@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtAmount"
+        android:layout_alignBottom="@+id/txtAmount"
+        android:layout_toStartOf="@+id/txtAmount"
+        android:text="@string/amount"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        style="@android:style/Widget.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnSetValue"
+        android:layout_centerHorizontal="true"
+        android:ems="4"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textSize="24sp"
+        android:imeOptions="actionNext"
+    />
+
+    <Button
+        android:id="@+id/btnSetValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/txtAmount"
+        android:onClick="onClick"
+        android:text="@string/btnSetValue" />
+
+    <TextView
+        android:id="@+id/lblBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnSetValue"
+        android:layout_marginTop="24dp"
+        android:text="@string/lblBank"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/BankLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblBank"
+        android:layout_alignBottom="@+id/lblBank"
+        android:layout_toStartOf="@+id/lblBank"
+        android:text="@string/BankLbl"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtRand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BankLbl"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="73dp"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/txtRand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtRand1"
+        android:layout_centerHorizontal="true"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtRand3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRand2"
+        android:layout_alignBottom="@+id/txtRand2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtRand1"
+        android:layout_alignEnd="@id/txtRand3"
+        android:layout_below="@+id/txtRand1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="39dp"
+        android:onClick="onClick"
+        android:text="@string/btnPull" />
+
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtRand3"
+        android:layout_alignStart="@+id/btnPull"
+        android:layout_below="@+id/btnPull"
+        android:layout_marginTop="56dp"
+        android:onClick="onClick"
+        android:text="@string/btnNewGame" />
+
+    <TextView
+        android:id="@+id/lblMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/txtRand1"
+        android:layout_below="@+id/btnNewGame"
+        android:layout_marginTop="9dp"
+        android:text="@string/lblMessage"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lblMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblMessage"
+        android:layout_alignBottom="@+id/lblMessage"
+        android:layout_toEndOf="@+id/lblMessage"
+        android:text="@string/lblMsg"
+        android:textSize="18sp" />
+</RelativeLayout>

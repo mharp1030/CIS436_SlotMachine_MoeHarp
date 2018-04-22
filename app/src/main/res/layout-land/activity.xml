@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtAmount"
+        android:layout_alignBottom="@+id/txtAmount"
+        android:layout_toStartOf="@+id/txtAmount"
+        android:text="@string/amount"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        style="@android:style/Widget.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnSetValue"
+        android:layout_centerHorizontal="true"
+        android:ems="4"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnSetValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/txtAmount"
+        android:onClick="onClick"
+        android:text="@string/btnSetValue" />
+
+    <TextView
+        android:id="@+id/lblBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnSetValue"
+        android:layout_marginTop="24dp"
+        android:text="@string/lblBank"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/BankLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblBank"
+        android:layout_alignBottom="@+id/lblBank"
+        android:layout_toStartOf="@+id/lblBank"
+        android:text="@string/BankLbl"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/txtRand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BankLbl"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/txtRand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtRand1"
+        android:layout_centerHorizontal="true"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtRand3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRand2"
+        android:layout_alignBottom="@+id/txtRand2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:ems="2"
+        android:enabled="false"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnPull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:onClick="onClick"
+            android:text="@string/btnPull" />
+
+        <Button
+            android:id="@+id/btnNewGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:onClick="onClick"
+            android:text="@string/btnNewGame" />
+    </LinearLayout>
+</RelativeLayout>
